@@ -38,9 +38,9 @@ app.use(bodyParser.json());
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 
-require('./routes/auth.routes')(app);
-require('./routes/user.routes')(app);
-require('./routes/moderator.routes')(app);
+require('./routes/auth.routes');
+require('./routes/user.routes');
+require('./routes/moderator.routes');
 
 db.mongoose
 .connect(
